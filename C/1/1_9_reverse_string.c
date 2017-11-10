@@ -1,13 +1,26 @@
 #include <stdio.h>
-#define MAXLINE 1000
+#include <string.h>
 
 int main() {
-    int c, i;
-    char string[MAXLINE], a;
-    for (i = MAXLINE-1; i > 0 && (c = getchar()) != EOF && c != '\n'; --i) {
-        string[1] = c;
-        printf("%d\n", c);
+
+    char s[100], r[100];
+    int n, c, d;
+
+
+    printf("Input a string\n");
+    gets(s);
+
+    n = strlen(s); // length - 1
+
+    // c = length - 1, d = 0; c >= 0; c--, d++
+    // итерируешься в обратном порядке, а d-переменная для индекса массива
+    for (c = n - 1, d = 0; c >= 0; c--, d++) {
+        r[d] = s[c];
     }
 
-    printf("%s\n", string);
+    r[d] = '\0';
+
+    printf("%s\n", r);
+
+    return 0;
 }
