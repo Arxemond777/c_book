@@ -7,7 +7,9 @@ main() {
     int ndigit[10];
     nwhite = nother = 0;
 
-    printf("Я тута %d\n", 'a');
+    printf("Я тута %d\n", 'a'); // code a=97
+    printf("Я тута %d\n", '0'); // code 0(zero)=49
+    printf("Я тута %d\n", 'a' - '0'); // code a(97)-0(49)=48(code ONE)
     printf("Я тута %d\n", (c = getchar()) == 97);
     for (i = 0; i < 10; ++i)
         ndigit[i] = 0;
